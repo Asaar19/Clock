@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOCK | Time & Date </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(49, 49, 49);
+
+        }
+
+        .container {
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 120px;
+            border: 5px solid aqua;
+            padding: 100px 50px;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin: 20px 0px;
+            font-size: 80px;
+        }
+        
+        
+        h2{
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 150px;
+            text-decoration: underline;
+        }
+        span {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="container">
+            <h1>Current Time Is: <span id="time"></span> </h1>
+            <h1>Current Date Is: <span id="date"></span> </h1>
+            <h2>Created by Ashaar</h2>
+        </div>
+
+
+
+    <script>
+
+
+        setInterval(() => {
+
+            let time = new Date();
+            document.getElementById('time').innerHTML = time.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+        }, 1000);
+
+
+        setInterval(() => {
+        }, 1000);
+
+            let date = new Date();
+            document.getElementById('date').innerHTML = date.toDateString('en-US', { day: 'numeric', month: 'string', year: 'numeric'});
+    </script>
+</body>
+
+</html>
